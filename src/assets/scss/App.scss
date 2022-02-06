@@ -1,0 +1,14 @@
+@import '~antd/dist/antd.css';
+
+$bg-color: yellow;
+$border-color: rgb(227, 255, 209);
+
+.app {
+  font-family: helvetica, arial, sans-serif;
+  padding: 2em;
+  border: 5px solid $border-color;
+
+  p {
+    background-color: $bg-color;
+  }
+}
