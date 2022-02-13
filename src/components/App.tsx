@@ -123,7 +123,7 @@ class App extends React.Component<Record<string, unknown>, IState> {
     const deltaFragmentCount = 5000;
     var deltaPiece: bigint = deltaplus > deltaFragmentCount ? deltaplus / BigInt(deltaFragmentCount) : BigInt(1);
     var xDelta = xMax - xMin;
-
+    console.log(deltaPiece)
     var xValues = [];
     var yValues = [];
     var labelValues = [];
@@ -232,7 +232,8 @@ class App extends React.Component<Record<string, unknown>, IState> {
                 yAxes: {
                   max: YMAX,
                   min: 0,
-                  display: false
+                  display: true,
+                  type: "logarithmic"
                 },
                 /*x: {
                   ticks: {
@@ -279,6 +280,15 @@ class App extends React.Component<Record<string, unknown>, IState> {
             >
               <InputNumber />
             </Form.Item>
+
+           {/* <Form.Item
+              label="thresholdzeroes"
+              name="thresholdzeroes"
+              initialValue={2}
+            >
+              <InputNumber />
+            </Form.Item>*/ }
+
 
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
               <Button type="primary" htmlType="submit">
